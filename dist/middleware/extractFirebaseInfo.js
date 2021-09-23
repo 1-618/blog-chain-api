@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var logging_1 = __importDefault(require("../config/logging"));
 var firebase_admin_1 = __importDefault(require("firebase-admin"));
+var cors_1 = __importDefault(require("cors"));
+(0, cors_1.default)();
 var extractFirebaseInfo = function (req, res, next) {
     var _a;
     logging_1.default.info('Validating firebase token');
