@@ -1,6 +1,9 @@
 import logging from '../config/logging';
 import firebaseAdmin from 'firebase-admin';
 import { Request, Response, NextFunction } from 'express';
+import cors from 'cors'
+
+cors();
 
 const extractFirebaseInfo = (req: Request, res: Response, next: NextFunction) => {
     logging.info('Validating firebase token');

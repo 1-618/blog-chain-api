@@ -1,6 +1,11 @@
 import express from 'express';
 import controller from '../controllers/user';
 import extractFirebaseInfo from '../middleware/extractFirebaseInfo';
+import cors from 'cors';
+
+const app = express()
+
+app.use(cors())
 
 const router = express.Router();
 
