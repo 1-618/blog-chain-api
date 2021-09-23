@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/server.js",
   "scripts": {
-    "build": "rimraf build && prettier --write build && tsc",
+    "build": "rimraf build && prettier --write build/ && tsc",
     "start": "nodemon --exec ts-node build/server.js"
   },
   "author": "",
