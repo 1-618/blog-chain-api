@@ -1,8 +1,8 @@
 //Import the dependencies need in this module
 import express from 'express';
 import morgan from 'morgan';
-import logging from './src/config/logging';
-import config from './src/config/config';
+import logging from './config/logging';
+import config from './config/config';
 import mongoose from 'mongoose';
 import firebaseAdmin from 'firebase-admin';
 import dotenv from 'dotenv'
@@ -13,8 +13,8 @@ import cors from 'cors'
 dotenv.config()
 
 //Import the routes that will be used to direct the flow of requests in the application
-import userRoutes from './src/routes/user';
-import blogRoutes from './src/routes/blog'
+import userRoutes from './routes/user';
+import blogRoutes from './routes/blog';
 
 //Initialize express application by running the express function
 const app = express();
@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Connect to Firebase Admin
-let serviceAccountKey = require('serviceAccountKey.json');
+let serviceAccountKey = require('../serviceAccountKey.json');
 
 //Initialize firebase
 firebaseAdmin.initializeApp({
