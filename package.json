@@ -4,8 +4,9 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "build": "rimraf dist && prettier --write dist/ && tsc",
-    "start": "nodemon --exec ts-node dist/server.js"
+    "build": "rimraf dist && tsc",
+    "start": "npm run build && node dist/server.js"
+   
   },
   "author": "",
   "license": "ISC",
