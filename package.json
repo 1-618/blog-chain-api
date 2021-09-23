@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
     "build": "rimraf dist && tsc",
-    "start": "node server.js"
+    "start": "npm run build && node dist/server.js"
   },
   "author": "",
   "license": "ISC",
