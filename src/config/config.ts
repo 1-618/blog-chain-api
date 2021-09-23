@@ -12,7 +12,7 @@ const config = {
 
     },
     server: {
-        port: 9000 || process.env.PORT
+        port: process.env.PORT || 9000
     }
 };
 

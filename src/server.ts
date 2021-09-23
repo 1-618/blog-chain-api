@@ -19,7 +19,7 @@ import blogRoutes from './routes/blog'
 const app = express();
 
 //Connect to Firebase Admin
-let serviceAccountKey = require('../config/serviceAccountKey.json');
+let serviceAccountKey = require('./serviceAccountKey.json');
 
 //Initialize firebase
 firebaseAdmin.initializeApp({
