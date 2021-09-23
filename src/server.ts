@@ -8,6 +8,7 @@ import firebaseAdmin from 'firebase-admin';
 import dotenv from 'dotenv'
 import cors from 'cors'
 
+
 //Give access to private application information
 dotenv.config()
 
@@ -18,6 +19,14 @@ import blogRoutes from './routes/blog'
 //Initialize express application by running the express function
 const app = express();
 
+//Logging Middleware
+app.use(morgan('tiny'));
+
+//Parse the body
+app.use(cors())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 //Connect to Firebase Admin
 let serviceAccountKey = require('./serviceAccountKey.json');
 
@@ -25,9 +34,6 @@ let serviceAccountKey = require('./serviceAccountKey.json');
 firebaseAdmin.initializeApp({
     credential: firebaseAdmin.credential.cert(serviceAccountKey)
 });
-
-//Logging Middleware
-app.use(morgan('tiny'));
 
 //Connect to Mongo database
 mongoose
@@ -49,12 +55,6 @@ app.use((req, res, next) => {
 
     next();
 });
-
-//Parse the body
-app.use(cors())
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
 
 //Our Routes
 app.use('/users', userRoutes);
