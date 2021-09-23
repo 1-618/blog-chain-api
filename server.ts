@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Connect to Firebase Admin
-let serviceAccountKey = require('../server');
+let serviceAccountKey = require('../server/serviceAccountKey.json');
 
 //Initialize firebase
 firebaseAdmin.initializeApp({
