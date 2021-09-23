@@ -70,4 +70,4 @@ app.use((req, res, next) => {
 });
 
 //Listen for http requests on specified port
-app.listen(config.server.port, () => console.log(`Server is running ${config.server.host}:${config.server.port}`));
+app.listen(config.server.port, () => console.log(`Server is running on port${config.server.port}`));

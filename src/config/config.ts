@@ -12,8 +12,7 @@ const config = {
 
     },
     server: {
-        host: 'localhost',
-        port: 9000
+        port: 9000 || process.env.PORT
     }
 };
 
