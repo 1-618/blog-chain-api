@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "build/server.js",
+  "main": "dist/server.js",
   "scripts": {
-    "build": "rimraf build && prettier --write dist && tsc",
-    "start": "nodemon --exec ts-node build/server.js"
+    "build": "rimraf dist && prettier --write && tsc",
+    "start": "nodemon --exec ts-node dist/server.js"
   },
   "author": "",
   "license": "ISC",
