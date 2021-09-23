@@ -11,9 +11,9 @@ const config = {
         },
 
    },
-    /*server: {
+    server: {
         port: process.env.PORT || 9000
-    }*/
+    }
 };
 
 export default config;

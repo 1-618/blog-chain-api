@@ -70,5 +70,5 @@ app.use((req, res, next) => {
 });
 let prt = process.env.PORT || 9000
 //Listen for http requests on specified port
-//app.listen(config.server.port, () => console.log(`Server is running on port${config.server.port}`));
-app.listen(prt, () => console.log(`listening on port ${prt}`))
+app.listen(config.server.port, () => console.log(`Server is running on port${config.server.port}`));
+//app.listen(prt, () => console.log(`listening on port ${prt}`))
